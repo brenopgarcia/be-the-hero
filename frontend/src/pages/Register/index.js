@@ -24,6 +24,7 @@ export default function Register() {
 
     try {
       const response = await api.post('ongs', data);
+      console.log(data)
 
       alert(`Seu ID de acesso: ${response.data.id}`);
 

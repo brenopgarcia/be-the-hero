@@ -22,10 +22,11 @@ export default function Logon() {
       localStorage.setItem('ongId', id);
       localStorage.setItem('ongName', response.data.name);
 
+
       history.push('/profile')
 
     } catch (error) {
-      alert( 'Falha no login, tente novamente!')
+      alert('Falha no login, tente novamente!')
     }
   }
 
@@ -41,7 +42,6 @@ export default function Logon() {
             placeholder="Sua ID"
             value={id}
             onChange={e => setId(e.target.value)}/>
-
           <button className="button" type="submit">Entrar</button>
 
           <Link className="back-link" to="/register">
